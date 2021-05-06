@@ -1,0 +1,58 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/it</property>
+        <property name="connection.username">alex</property>
+        <property name="connection.password">vhXA-5</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">20</property>
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">none</property>
+        <!-- dbcp connection pool configuration -->
+        <property name="hibernate.dbcp.initialSize">5</property>
+        <property name="hibernate.dbcp.maxTotal">20</property>
+        <property name="hibernate.dbcp.maxIdle">10</property>
+        <property name="hibernate.dbcp.minIdle">5</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+        <mapping class="com.academy.it.boot.demo.model.City"/>
+        <mapping class="com.academy.it.boot.demo.model.Department"/>
+        <mapping class="com.academy.it.boot.demo.model.Title"/>
+        <mapping class="com.academy.it.boot.demo.model.Employee"/>
+<!--        <mapping class="by.academy.persistence.model.examples.Car"/>-->
+<!--        <mapping class="by.academy.persistence.model.examples.Report"/>-->
+<!--        <mapping class="com.academy.persistence.model.examples.Product"/>-->
+<!--        <mapping class="com.academy.persistence.model.examples.ProductType"/>-->
+
+<!--        <mapping class="by.academy.persistence.model.examples.many.Post"/>-->
+<!--        <mapping class="by.academy.persistence.model.examples.many.Tag"/>-->
+
+<!--        <mapping class="by.academy.persistence.model.hierarchy.mapped.Bird"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.mapped.Fish"/>-->
+
+<!--        <mapping class="by.academy.persistence.model.hierarchy.single.Animal"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.single.Bird"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.single.Fish"/>-->
+
+<!--        <mapping class="by.academy.persistence.model.hierarchy.join.Animal"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.join.Bird"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.join.Fish"/>-->
+
+<!--        <mapping class="by.academy.persistence.model.hierarchy.table.Animal"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.table.Bird"/>-->
+<!--        <mapping class="by.academy.persistence.model.hierarchy.table.Fish"/>-->
+
+
+    </session-factory>
+</hibernate-configuration>
