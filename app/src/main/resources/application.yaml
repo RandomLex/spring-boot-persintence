@@ -11,3 +11,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/it
     username: alex
     password: vhXA-5
+
+repository:
+  type: memory

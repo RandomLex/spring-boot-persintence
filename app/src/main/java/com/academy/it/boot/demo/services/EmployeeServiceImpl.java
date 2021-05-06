@@ -15,7 +15,6 @@ import java.util.Optional;
 
 @Slf4j
 @Component
-@PropertySource("classpath:app.properties")
 public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeRepository repository;
